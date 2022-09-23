@@ -1,0 +1,59 @@
+#game div {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border: 1.5px solid;
+  border-radius: 50%;
+  transition: border 2000ms;
+  color: orchid;
+  transition: all 2000ms;
+}
+
+#game div:hover {
+  transition: all 2000ms;
+  box-shadow: 0 0 100px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#game {
+  /* copied from: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout */
+  display: grid;
+  grid-template-columns: repeat(5, 0.5fr);
+  gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+h1 {
+  text-align: center;
+  font-family: Montserrat;
+}
+p {
+  text-align: center;
+  font-family: Montserrat;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 0.5px solid;
+  transition: all 3000ms;
+  font-family: Montserrat;
+}
+
+.button:hover {
+  box-shadow: 0 0 1000px;
+  transition: all 2000ms;
+  border: 23px solid;
+}
+
+/* further improvement: adjust spacing based off screen size, moves, highscore, proper game over, */
+/* button start hover effect closes color around button without pushing text around?
+.button:hover {
+  box-shadow: 0 0 1000px;
+  transition: all 3000ms;
+  border: 40px solid;
+} */
