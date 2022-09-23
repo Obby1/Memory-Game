@@ -11,8 +11,8 @@
 
 #game div:hover {
   transition: all 2000ms;
-  box-shadow: 0 0 100px;
-  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 150px;
+  background-color: rgba(0, 0, 0, 0.10);
 }
 
 #game {
@@ -45,7 +45,7 @@ p {
 }
 
 .button:hover {
-  box-shadow: 0 0 1000px;
+  box-shadow: 0 0 100px;
   transition: all 2000ms;
   border: 23px solid;
 }

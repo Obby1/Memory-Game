@@ -61,13 +61,13 @@ if (gameContainer.innerHTML == ``) {
   startBtn.classList.add("button");
   startBtn.innerHTML = "START GAME";
   startBtn.addEventListener(`click`, startGame);
-  const tempRandomRGB = randomRGB();
+  const tempRandomRGB = randomRGBforBtn();
   startBtn.style.borderColor = tempRandomRGB;
   startBtn.style.boxShadow = `0px 0px 50px ${tempRandomRGB}`;
   gameContainer.parentElement.append(startBtn);
   setInterval(function () {
     // startBtn.style.borderColor = randomRGB();
-    const tempRandomRGB2 = randomRGB();
+    const tempRandomRGB2 = randomRGBforBtn();
     startBtn.style.borderColor = tempRandomRGB2;
     startBtn.style.boxShadow = `0px 0px 50px ${tempRandomRGB2}`;
   }, 2000);
@@ -215,6 +215,13 @@ function randomRGB() {
   const g = Math.floor(Math.random() * 256);
   const b = Math.floor(Math.random() * 256);
   return `rgba(${r},${g},${b})`;
+}
+
+function randomRGBforBtn() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgba(${r},${g},${b}, 0.3)`;
 }
 
 // To Do List: add extra functionality [better start button, better gameover, total moves, toatl attempts played, bestscore, add css]
